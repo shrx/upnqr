@@ -9,7 +9,7 @@ from qrcodegen import QrSegment, QrCode
 ENCODING = "ISO-8859-2"
 PATTERN_KODA_NAMENA = re.compile("^[A-Z]{4}$")
 PATTERN_IBAN = re.compile("^[A-Z]{2}\d{2}(\d{4}){3}\d{3}$") # Not really IBAN, but good enough
-PATTERN_REFERENCA = re.compile("^[A-Z]{2}[0-9]{2}[A-Z0-9]{0,22}$")
+PATTERN_REFERENCA = re.compile("^[A-Z]{2}[0-9]{2}[A-Z0-9-]{0,22}$")
 
 def _constrain_length(field, maxLength):
     """Validator: ensures that the string does not exceed the given length."""
